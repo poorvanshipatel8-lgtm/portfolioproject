@@ -1,0 +1,108 @@
+/* Print-friendly resume-style layout */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .scroll-progress,
+  .nav-toggle,
+  .nav-drawer,
+  .nav-overlay,
+  .theme-toggle,
+  .command-trigger,
+  .command-palette,
+  .back-to-top,
+  .photo-frame .backer,
+  .proj-card__expand,
+  .proj-card__details,
+  .contact-form,
+  .magnetic-wrap {
+    display: none !important;
+  }
+
+  nav {
+    position: static !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 0 !important;
+  }
+
+  nav ul,
+  .nav-actions {
+    display: none !important;
+  }
+
+  .hero {
+    padding: 24px 0 !important;
+    page-break-after: avoid;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr 120px !important;
+    gap: 24px !important;
+  }
+
+  .photo-frame {
+    max-width: 120px !important;
+  }
+
+  section {
+    padding: 20px 0 !important;
+    page-break-inside: avoid;
+    border-top: 1px solid #ddd !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .timeline::before,
+  .job::before {
+    border-color: #666 !important;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .proj-card {
+    border: 1px solid #ccc !important;
+    padding: 12px !important;
+  }
+
+  .proj-card__hover {
+    display: none !important;
+  }
+
+  footer {
+    background: transparent !important;
+    color: #000 !important;
+    padding: 24px 0 !important;
+    border-top: 2px solid #000 !important;
+  }
+
+  footer h2,
+  footer p,
+  footer a {
+    color: #000 !important;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 9pt;
+    font-weight: normal;
+  }
+
+  a[href^='mailto']::after {
+    content: none;
+  }
+}

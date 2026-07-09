@@ -1,0 +1,53 @@
+/* Design tokens — light (default) and dark themes */
+
+:root {
+  --cream: #faf9f6;
+  --cream-deep: #f1eee8;
+  --charcoal: #1a1a1a;
+  --charcoal-soft: #57534e;
+  --coral: #a6192e;
+  --coral-deep: #7e1223;
+  --coral-tint: #f3dade;
+  --tag-hr: #a6192e;
+  --tag-marketing: #c9a227;
+  --tag-ops: #3d4a5c;
+  --tag-analytics: #57534e;
+  --line: rgba(26, 26, 26, 0.12);
+  --nav-bg: rgba(250, 249, 246, 0.92);
+  --card-bg: #ffffff;
+  --shadow: rgba(35, 35, 35, 0.08);
+  --progress: var(--coral);
+  --focus-ring: var(--coral);
+  --hero-backer: var(--coral);
+  --footer-bg: var(--charcoal);
+  --footer-text: var(--cream);
+  --footer-muted: rgba(250, 243, 234, 0.65);
+  --footer-border: rgba(250, 243, 234, 0.15);
+  --chip-bg: var(--coral-tint);
+  --chip-text: var(--coral-deep);
+  --overlay: rgba(26, 26, 26, 0.4);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-height: 72px;
+}
+
+[data-theme='dark'] {
+  --cream: #141210;
+  --cream-deep: #1c1916;
+  --charcoal: #f0ebe3;
+  --charcoal-soft: #a8a095;
+  --coral: #c43d52;
+  --coral-deep: #e05a6d;
+  --coral-tint: #2a1a1d;
+  --line: rgba(240, 235, 227, 0.12);
+  --nav-bg: rgba(20, 18, 16, 0.94);
+  --card-bg: #1c1916;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --hero-backer: #7e1223;
+  --footer-bg: #0d0c0b;
+  --footer-text: #f0ebe3;
+  --footer-muted: rgba(240, 235, 227, 0.55);
+  --footer-border: rgba(240, 235, 227, 0.1);
+  --chip-bg: #2a1a1d;
+  --chip-text: #e8a0ab;
+  --overlay: rgba(0, 0, 0, 0.65);
+}
