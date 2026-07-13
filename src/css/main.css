@@ -668,9 +668,9 @@ section.divide {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 12px;
+  padding: 0;
   background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(241, 238, 232, 0.95));
-  min-height: 132px;
+  min-height: 160px;
   transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.25s var(--ease);
 }
 
@@ -681,6 +681,8 @@ section.divide {
   background: linear-gradient(120deg, transparent 0%, rgba(166, 25, 46, 0.06) 45%, transparent 100%);
   transform: translateX(-100%);
   transition: transform 0.6s var(--ease);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .proj-card:hover .proj-card__preview-shell,
@@ -801,16 +803,17 @@ section.divide {
   background: linear-gradient(180deg, #4f6b7a 0%, #233b4f 100%);
 }
 
-/* Image preview styling and lightweight 3D tilt */
 .proj-card__preview-img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
   display: block;
   transform-origin: center center;
   transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s;
-  box-shadow: 0 6px 18px rgba(22,22,22,0.06);
+  box-shadow: none;
+  position: relative;
+  z-index: 2;
 }
 
 .proj-card:hover .proj-card__preview-img,
@@ -836,42 +839,7 @@ section.divide {
   }
 }
 
-.proj-card__hover {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--charcoal-soft);
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s var(--ease), max-height 0.35s var(--ease), margin 0.3s;
-}
 
-.proj-card:hover .proj-card__hover,
-.proj-card.is-expanded .proj-card__hover {
-  opacity: 1;
-  max-height: 200px;
-}
-
-.proj-card__hover dt {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--charcoal-soft);
-  margin-top: 8px;
-}
-
-.proj-card__hover dt:first-child {
-  margin-top: 0;
-}
-
-.proj-card__hover dd {
-  margin: 4px 0 0;
-  color: var(--charcoal);
-}
 
 .proj-card__actions {
   display: flex;

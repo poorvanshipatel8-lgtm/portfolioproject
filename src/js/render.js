@@ -64,52 +64,17 @@ function renderProject(p) {
       <p>${p.summary}</p>
       <div class="proj-card__preview proj-card__preview--${p.id}" aria-hidden="true">
         <div class="proj-card__preview-shell">
-          <div class="proj-card__preview-top">
-            <span class="preview-chip preview-chip--main">Dashboard preview</span>
-            <span class="preview-chip">Live insights</span>
-          </div>
-          <div class="proj-card__preview-grid">
-            <div class="preview-metric">
-              <span>Signals</span>
-              <strong>82%</strong>
-            </div>
-            <div class="preview-metric preview-metric--accent">
-              <span>Momentum</span>
-              <strong>+18%</strong>
-            </div>
-          </div>
           ${p.previewImage
             ? `<img class="proj-card__preview-img" src="/images/${p.previewImage}" alt="${p.title} preview" width="560" height="280" loading="lazy">`
-            : `
-            <div class="preview-chart">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>`}
+            : ''}
         </div>
       </div>
-      <dl class="proj-card__hover">
-        <dt>What I did</dt>
-        <dd>${p.hover.did}</dd>
-        <dt>Tools used</dt>
-        <dd>${p.hover.tools}</dd>
-        <dt>Outcome</dt>
-        <dd>${p.hover.outcome}</dd>
-      </dl>
       <div class="proj-card__actions">
         ${
           p.dashboardUrl
             ? `<a class="proj-card__link" href="${p.dashboardUrl}" target="_blank" rel="noopener noreferrer">Open dashboard ↗</a>`
             : ''
         }
-        <button type="button" class="proj-card__expand" aria-expanded="false">
-          Read case study
-        </button>
-      </div>
-      <div class="proj-card__details" hidden>
-        ${p.caseStudy.map((para) => `<p>${para}</p>`).join('')}
       </div>
     </article>`;
 }
