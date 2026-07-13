@@ -62,6 +62,31 @@ function renderProject(p) {
       <span class="tool">${p.tool}</span>
       <h3>${p.title}</h3>
       <p>${p.summary}</p>
+      <div class="proj-card__preview proj-card__preview--${p.id}" aria-hidden="true">
+        <div class="proj-card__preview-shell">
+          <div class="proj-card__preview-top">
+            <span class="preview-chip preview-chip--main">Dashboard preview</span>
+            <span class="preview-chip">Live insights</span>
+          </div>
+          <div class="proj-card__preview-grid">
+            <div class="preview-metric">
+              <span>Signals</span>
+              <strong>82%</strong>
+            </div>
+            <div class="preview-metric preview-metric--accent">
+              <span>Momentum</span>
+              <strong>+18%</strong>
+            </div>
+          </div>
+          <div class="preview-chart">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
       <dl class="proj-card__hover">
         <dt>What I did</dt>
         <dd>${p.hover.did}</dd>

@@ -659,6 +659,160 @@ section.divide {
   margin: 0;
 }
 
+.proj-card__preview {
+  margin-top: 16px;
+}
+
+.proj-card__preview-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(241, 238, 232, 0.95));
+  min-height: 132px;
+  transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.25s var(--ease);
+}
+
+.proj-card__preview-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(166, 25, 46, 0.06) 45%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s var(--ease);
+}
+
+.proj-card:hover .proj-card__preview-shell,
+.proj-card.is-expanded .proj-card__preview-shell {
+  transform: translateY(-2px);
+  border-color: rgba(166, 25, 46, 0.24);
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.proj-card:hover .proj-card__preview-shell::before,
+.proj-card.is-expanded .proj-card__preview-shell::before {
+  transform: translateX(100%);
+}
+
+.proj-card__preview-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.preview-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(26, 26, 26, 0.06);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+}
+
+.preview-chip--main {
+  background: rgba(166, 25, 46, 0.12);
+  color: var(--coral-deep);
+}
+
+.proj-card__preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.preview-metric {
+  padding: 8px 10px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.preview-metric span {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+}
+
+.preview-metric strong {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  color: var(--charcoal);
+}
+
+.preview-metric--accent {
+  background: rgba(166, 25, 46, 0.08);
+}
+
+.preview-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 52px;
+}
+
+.preview-chart span {
+  flex: 1;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(180deg, var(--coral) 0%, var(--coral-deep) 100%);
+  animation: previewRise 1.6s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.preview-chart span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.preview-chart span:nth-child(3) {
+  animation-delay: 0.2s;
+  height: 60%;
+}
+
+.preview-chart span:nth-child(4) {
+  animation-delay: 0.3s;
+  height: 78%;
+}
+
+.preview-chart span:nth-child(5) {
+  animation-delay: 0.4s;
+  height: 92%;
+}
+
+.proj-card__preview--uber .preview-chart span {
+  background: linear-gradient(180deg, #8a6d3b 0%, #5b4c2b 100%);
+}
+
+.proj-card__preview--blinkit .preview-chart span {
+  background: linear-gradient(180deg, #dc6b4a 0%, #a6192e 100%);
+}
+
+.proj-card__preview--samsung .preview-chart span {
+  background: linear-gradient(180deg, #4f6b7a 0%, #233b4f 100%);
+}
+
+@keyframes previewRise {
+  0%,
+  100% {
+    transform: scaleY(0.88);
+    opacity: 0.82;
+  }
+  50% {
+    transform: scaleY(1.06);
+    opacity: 1;
+  }
+}
+
 .proj-card__hover {
   margin-top: 16px;
   padding-top: 16px;
