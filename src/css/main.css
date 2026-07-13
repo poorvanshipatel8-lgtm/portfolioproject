@@ -696,8 +696,16 @@ section.divide {
   color: var(--charcoal);
 }
 
-.proj-card__expand {
+.proj-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
   margin-top: 14px;
+}
+
+.proj-card__link,
+.proj-card__expand {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.06em;
@@ -705,6 +713,11 @@ section.divide {
   color: var(--coral-deep);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.proj-card__link:hover,
+.proj-card__expand:hover {
+  color: var(--coral);
 }
 
 .proj-card__details {

@@ -70,9 +70,16 @@ function renderProject(p) {
         <dt>Outcome</dt>
         <dd>${p.hover.outcome}</dd>
       </dl>
-      <button type="button" class="proj-card__expand" aria-expanded="false">
-        Read case study
-      </button>
+      <div class="proj-card__actions">
+        ${
+          p.dashboardUrl
+            ? `<a class="proj-card__link" href="${p.dashboardUrl}" target="_blank" rel="noopener noreferrer">Open dashboard ↗</a>`
+            : ''
+        }
+        <button type="button" class="proj-card__expand" aria-expanded="false">
+          Read case study
+        </button>
+      </div>
       <div class="proj-card__details" hidden>
         ${p.caseStudy.map((para) => `<p>${para}</p>`).join('')}
       </div>
