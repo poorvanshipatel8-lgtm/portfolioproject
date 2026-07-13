@@ -78,13 +78,16 @@ function renderProject(p) {
               <strong>+18%</strong>
             </div>
           </div>
-          <div class="preview-chart">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          ${p.previewImage
+            ? `<img class="proj-card__preview-img" src="/images/${p.previewImage}" alt="${p.title} preview" width="560" height="280" loading="lazy">`
+            : `
+            <div class="preview-chart">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>`}
         </div>
       </div>
       <dl class="proj-card__hover">
