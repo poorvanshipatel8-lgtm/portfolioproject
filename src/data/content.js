@@ -14,7 +14,12 @@ export const site = {
   metaDescription:
     "Portfolio of Poorvanshi Patel — MBA student at Welingkar Mumbai, AI Marketing enthusiast, Founder's Office Manager with experience in HR, marketing, operations, and analytics.",
   ogImage: '/images/profile.jpg',
-  formspreeId: '', // Optional: add your Formspree form ID, e.g. 'xyzabc'
+  // EmailJS Configuration - Get these from https://dashboard.emailjs.com/
+  emailjs: {
+    serviceId: 'service_h5gm7x8',        // Your EmailJS Service ID
+    templateId: 'template_8kp2j4x',      // Your EmailJS Template ID
+    publicKey: 'MYjRpZm5c2X7k9L0m',      // Your EmailJS Public Key
+  },
 };
 
 export const navLinks = [
