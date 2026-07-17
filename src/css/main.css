@@ -1075,6 +1075,14 @@ footer p.sub {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links .contact-note {
+  width: 100%;
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 14px;
 }
 
 .footer-links a {

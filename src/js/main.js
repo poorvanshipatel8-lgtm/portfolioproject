@@ -6,7 +6,6 @@ import { initProjects } from './projects.js';
 import { initTheme } from './theme.js';
 import { initCommand } from './command.js';
 import { initMagnetic } from './magnetic.js';
-import { initContactForm } from './contact.js';
 
 renderApp();
 initNav();
@@ -16,4 +15,3 @@ initProjects();
 initTheme();
 initCommand();
 initMagnetic();
-initContactForm();

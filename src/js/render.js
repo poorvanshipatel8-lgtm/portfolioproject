@@ -254,45 +254,10 @@ export function renderApp() {
         <p class="sub">${contact.sub}</p>
         <div class="contact-layout">
           <div class="footer-links">
-            <a href="mailto:${site.email}">${site.email}</a>
+            <p class="contact-note">Reach out to me at</p>
+            <a class="btn primary" href="mailto:${site.email}?subject=Hello%20from%20your%20portfolio">${site.email}</a>
             <a class="ghost" href="${site.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
-          ${
-            formspreeAction
-              ? `
-          <form class="contact-form" action="${formspreeAction}" method="POST">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn primary magnetic-btn">Send message</button>
-          </form>`
-              : `
-          <form class="contact-form" data-mailto-form>
-            <div>
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn primary magnetic-btn">Send via email</button>
-            <p class="contact-form__note">Opens your email client. Add a Formspree ID in content.js for direct submission.</p>
-          </form>`
-          }
         </div>
         <div class="foot-bottom">
           <span>${site.name} © ${contact.year}</span>
