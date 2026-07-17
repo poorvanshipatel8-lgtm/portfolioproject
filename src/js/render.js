@@ -254,8 +254,12 @@ export function renderApp() {
         <p class="sub">${contact.sub}</p>
         <div class="contact-layout">
           <div class="footer-links">
-            <p class="contact-note">Reach out to me at</p>
-            <a class="btn primary" href="mailto:${site.email}?subject=Hello%20from%20your%20portfolio">${site.email}</a>
+            <div>
+              <p class="contact-note">Reach out to me at</p>
+              <p class="contact-subnote">Click the button to open your email app or use Gmail if preferred.</p>
+            </div>
+            <a class="btn primary" href="mailto:${site.email}?subject=Hello%20from%20your%20portfolio" target="_blank" rel="noopener noreferrer">${site.email}</a>
+            <a class="btn secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}&su=Hello%20from%20your%20portfolio" target="_blank" rel="noopener noreferrer">Open Gmail</a>
             <a class="ghost" href="${site.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
         </div>

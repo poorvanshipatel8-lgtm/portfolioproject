@@ -1078,11 +1078,21 @@ footer p.sub {
   align-items: center;
 }
 
+.footer-links > div {
+  min-width: 220px;
+}
+
 .footer-links .contact-note {
-  width: 100%;
-  margin: 0;
+  margin: 0 0 6px;
   color: var(--footer-muted);
   font-size: 14px;
+}
+
+.footer-links .contact-subnote {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .footer-links a {
@@ -1091,9 +1101,34 @@ footer p.sub {
   font-weight: 600;
   padding: 12px 22px;
   border-radius: 8px;
-  background: var(--coral);
+  border: 1.5px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn.secondary {
+  background: transparent;
+  border-color: var(--footer-border);
+  color: var(--cream);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-links a.ghost {
+  background: transparent;
+  border: 1.5px solid var(--footer-border);
+  color: var(--footer-text);
+}
+
+.footer-links a.ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-links a:not(.ghost):hover {
+  background: var(--coral-deep);
+  border-color: var(--coral-deep);
   color: #fff;
-  transition: background 0.2s ease;
 }
 
 .footer-links a:hover {
