@@ -320,7 +320,8 @@ nav ul {
 }
 
 .btn.primary {
-  background: var(--charcoal);
+  background: var(--coral);
+  border-color: var(--coral);
   color: var(--cream);
 }
 
