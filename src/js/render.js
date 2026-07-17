@@ -86,6 +86,7 @@ export function renderApp() {
   const formspreeAction = site.formspreeId
     ? `https://formspree.io/f/${site.formspreeId}`
     : null;
+  const emailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.email)}`;
 
   root.innerHTML = `
     <div class="scroll-progress" aria-hidden="true"></div>
@@ -256,9 +257,8 @@ export function renderApp() {
           <div class="footer-links">
             <div>
               <p class="contact-note">Reach out to me at</p>
-              <p class="contact-subnote">Click the email to open your mail app and send a message.</p>
             </div>
-            <a class="btn primary" href="mailto:${site.email}" target="_blank" rel="noopener noreferrer">${site.email}</a>
+            <a class="btn primary" href="${emailHref}" target="_blank" rel="noopener noreferrer">${site.email}</a>
             <a class="ghost" href="${site.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
         </div>
