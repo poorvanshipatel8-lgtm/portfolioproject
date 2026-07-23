@@ -122,7 +122,7 @@ export const projects = {
       previewImage: 'blinkit.png',
       title: 'Blinkit Sales Dashboard',
       dashboardUrl:
-        'https://app.powerbi.com/groups/me/reports/866b188e-5286-4892-bc5e-1d8675500331/c6479f6ae2692a43591b?experience=power-bi',
+        'https://app.powerbi.com/groups/me/reports/73ef3839-34df-4705-82f3-cabe523fd3bf/f62645afbc89cda06b90?experience=power-bi',
       summary:
         'Built a sales dashboard for trend analysis and KPI tracking across product and category performance.',
       hover: {
@@ -141,7 +141,7 @@ export const projects = {
       previewImage: 'uber.png',
       title: 'Uber Bookings Dashboard',
       dashboardUrl:
-        'https://app.powerbi.com/groups/me/reports/73ef3839-34df-4705-82f3-cabe523fd3bf/f62645afbc89cda06b90?experience=power-bi',
+        'https://app.powerbi.com/groups/me/reports/866b188e-5286-4892-bc5e-1d8675500331/c6479f6ae2692a43591b?experience=power-bi',
       summary:
         'Designed a dashboard tracking bookings, ratings, and business performance to surface operational patterns.',
       hover: {
