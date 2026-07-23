@@ -122,7 +122,7 @@ export const projects = {
       previewImage: 'blinkit.png',
       title: 'Blinkit Sales Dashboard',
       dashboardUrl:
-        'https://app.powerbi.com/groups/me/reports/4265b182-4dca-4839-a9e4-0a61642fd506/5f8217ab8eede68b9bcc?experience=power-bi',
+        'https://app.powerbi.com/groups/me/reports/866b188e-5286-4892-bc5e-1d8675500331/c6479f6ae2692a43591b?experience=power-bi',
       summary:
         'Built a sales dashboard for trend analysis and KPI tracking across product and category performance.',
       hover: {
@@ -141,7 +141,7 @@ export const projects = {
       previewImage: 'uber.png',
       title: 'Uber Bookings Dashboard',
       dashboardUrl:
-        'https://app.powerbi.com/groups/me/reports/2df64178-fa94-4ba0-86f7-53050a728a21/f62645afbc89cda06b90?experience=power-bi',
+        'https://app.powerbi.com/groups/me/reports/73ef3839-34df-4705-82f3-cabe523fd3bf/f62645afbc89cda06b90?experience=power-bi',
       summary:
         'Designed a dashboard tracking bookings, ratings, and business performance to surface operational patterns.',
       hover: {
@@ -160,7 +160,7 @@ export const projects = {
       previewImage: 'samsung.png',
       title: 'Samsung Operations Dashboard',
       dashboardUrl:
-        'https://app.powerbi.com/groups/me/reports/0d073026-793b-4d14-ae33-01113af199e1/c6479f6ae2692a43591b?experience=power-bi',
+        'https://app.powerbi.com/groups/me/reports/af94db3c-7dd6-462c-8955-c4d596703aa5/fb6a032f49349f780eb7?experience=power-bi',
       summary:
         'Built a logistics and supply chain performance dashboard for tracking operational efficiency.',
       hover: {
